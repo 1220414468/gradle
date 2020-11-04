@@ -232,7 +232,6 @@ class ConfigurationCacheDependencyResolutionIntegrationTest extends AbstractConf
                 implementation project(':b')
             }
         """
-        file('root.green') << 'root'
     }
 
     def "task input file collection can include the output of artifact transform of project dependencies"() {
