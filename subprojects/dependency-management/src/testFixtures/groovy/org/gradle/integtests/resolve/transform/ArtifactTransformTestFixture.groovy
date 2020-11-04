@@ -139,7 +139,7 @@ class JarProducer extends DefaultTask {
      * Asserts that exactly the given files where transformed by the 'simple' transforms below
      */
     void assertTransformed(String... fileNames) {
-        assert result.output.findAll("processing (.+)").sort() == fileNames.collect { "processing $it" }.sort()
+        assert result.output.findAll("processing \\[(.+)\\]").sort() == fileNames.collect { "processing [$it]" }.sort()
     }
 
     /**
